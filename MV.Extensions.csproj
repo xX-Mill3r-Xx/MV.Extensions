@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>MV.Extensions</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>MillerMartinsVasco</Authors>
+    <Company>VascoDeveloper</Company>
+    <Description>Extensões para caixa de texto</Description>
+    <PackageTags>TextBox;strings;retorno;MillerVasco;VascoDeveloper</PackageTags>
+    <RepositoryUrl>https://github.com/seuusuario/nome_do_repositorio</RepositoryUrl>
+  </PropertyGroup>
+
+</Project>
