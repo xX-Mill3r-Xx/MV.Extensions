@@ -14,14 +14,34 @@ namespace MV.Extensions
             return string.IsNullOrEmpty(texto) ? texto : texto.ToLower();
         }
 
-        public static int SomenteInteiros(int numero)
+        public static string SomenteInteiros(string numero)
         {
+            if(string.IsNullOrEmpty(numero))
             return numero;
+
+            return new string(numero.Where(char.IsDigit).ToArray());
         }
 
-        public static decimal SomenteDecimais(decimal numeroDecimal)
+        public static string SomenteDecimais(string numeroDecimal)
         {
+            if(string.IsNullOrEmpty(numeroDecimal))
             return numeroDecimal;
+
+            bool separadorEncontrado = false;
+            var sb = new System.Text.StringBuilder();
+
+            foreach (var item in numeroDecimal)
+            {
+                if(char.IsDigit(item))
+                    sb.Append(item);
+                else if ((item == '.' || item == ',') && !separadorEncontrado)
+                {
+                    sb.Append(item);
+                    separadorEncontrado = true;
+                }
+            }
+
+            return sb.ToString();
         }
 
         public static string RemoverAcentos(string texto)
