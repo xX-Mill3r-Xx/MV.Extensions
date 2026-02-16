@@ -1,4 +1,6 @@
-﻿namespace MV.Extensions
+﻿using System.Text.RegularExpressions;
+
+namespace MV.Extensions
 {
     public static class TextBoxExtension
     {
@@ -37,6 +39,21 @@
             }
 
             return sb.ToString().Normalize(System.Text.NormalizationForm.FormC);
+        }
+
+        public static int SomentePositivos(int numero)
+        {
+            return numero < 0 ? 0 : numero;
+        }
+
+        public static decimal ArredondaPraCima(decimal valor)
+        {
+            return Math.Ceiling(valor);
+        }
+
+        public static decimal ArredondaPraBaixo(decimal valor)
+        {
+            return Math.Floor(valor);
         }
     }
 }
